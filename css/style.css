@@ -2,13 +2,12 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #d97081, #6bd79f, #165cad) no-repeat;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0) no-repeat;
   min-height: 100vh;
 }
 
 .card {
-  width: 500px;
-  height: 500px;
+  
   margin: 100px auto;
   border: 1px solid;
   text-align: center;
@@ -24,23 +23,26 @@ body {
 .temp {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 72px;
-  line-height: 21px;
-  color: #55046c;
+  line-height: 87px;
+  color: #ffffff;
 }
 
 .head {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 21px;
-  color: #55046c;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 34px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .clouds {
-  font-family: "Caveat";
-  font-size: 40px;
-  color: #ad168c;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.8);
 }
