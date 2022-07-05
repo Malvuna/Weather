@@ -9,7 +9,7 @@ body {
 .card {
   
   margin: 100px auto;
-  border: 1px solid;
+  /* border: 1px solid; */
   text-align: center;
 
   font-family: "Inter";

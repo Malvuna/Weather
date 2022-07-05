@@ -10,10 +10,8 @@ navigator.geolocation.getCurrentPosition(
   },
   async function () {
     console.log("error"); // если не определяется то вызывает функцию погоды по городу
-  },
+    gettCity()},
 );
-
-gettCity();
 
 async function gettCityLoc() {
   await fetch(
