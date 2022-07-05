@@ -1,0 +1,46 @@
+html {
+}
+
+body {
+  background: linear-gradient(135deg, #d97081, #6bd79f, #165cad) no-repeat;
+  min-height: 100vh;
+}
+
+.card {
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  border: 1px solid;
+  text-align: center;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #54595e;
+}
+
+.temp {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 21px;
+  color: #55046c;
+}
+
+.head {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 21px;
+  color: #55046c;
+}
+
+.clouds {
+  font-family: "Caveat";
+  font-size: 40px;
+  color: #ad168c;
+}
