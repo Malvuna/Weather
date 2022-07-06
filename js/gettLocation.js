@@ -1,5 +1,5 @@
 import { newElement } from "./newElement.js";
-
+import { gettCity } from "./gettCity.js";
 
 // функция берет локацию и отправляет на сервет локацию
 async function gettLocation(latitude, longitude) {

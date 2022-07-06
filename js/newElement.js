@@ -3,6 +3,7 @@
 //функция отрисовывает температуру и облака
 function newElement(letTemp, letClouds ) {
 
+
 //переменная для дива температуры
  let divTemp = document.querySelector("#idTemp")
 

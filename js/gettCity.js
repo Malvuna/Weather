@@ -7,11 +7,11 @@ async function gettCity() {
     .then((data) => {
       // console.log(data);
       // console.log(data.ip);
-      two(data.ip);
+      gettCityTwo(data.ip);
     });
 }
 
-async function two(ip) {
+async function gettCityTwo(ip) {
   await fetch(
     "https://geo.ipify.org/api/v2/country?apiKey=at_61iM0mo5Vtc36OG1SzfCNvt1hSUEc&ipAddress=" +
       ip,
@@ -23,11 +23,11 @@ async function two(ip) {
     .then((data) => {
       // console.log(data);
       // console.log(data.location.region)
-      three(data.location.region);
+      gettCityThree(data.location.region);
     });
 }
 
-async function three(region) {
+async function gettCityThree(region) {
   await fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       region +
@@ -35,7 +35,7 @@ async function three(region) {
   )
     .then((data) => data.json())
     .then((data) => {
-      console.log(data);
+   
       headCityDraw(region);
       gettLocation(data.coord.lat, data.coord.lon);
     });
