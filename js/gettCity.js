@@ -1,4 +1,3 @@
-import { headCityDraw } from "./headCityDraw.js";
 import { gettLocation } from "./gettLocation.js";
 
 async function gettCity() {
@@ -35,8 +34,6 @@ async function gettCityThree(region) {
   )
     .then((data) => data.json())
     .then((data) => {
-   
-      headCityDraw(region);
       gettLocation(data.coord.lat, data.coord.lon);
     });
 }

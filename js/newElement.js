@@ -1,29 +1,41 @@
+import { divSearch } from "./javascript.js";
 
+// переменная для main
+export let main = document.querySelector("#main");
 
-//функция отрисовывает температуру и облака
-function newElement(letTemp, letClouds ) {
+// переменная для card
+export let divCard = document.createElement("div");
 
+//функция отрисовывает карточку с температурой и облаками
+function newElement(letTemp, letClouds, cityName) {
+  divCard.className = "card";
 
-//переменная для дива температуры
- let divTemp = document.querySelector("#idTemp")
+  //переменная для  температуры
+  let pTemp = document.createElement("p");
+  pTemp.className = "temp";
+  pTemp.innerHTML = Math.round(letTemp - 273) + " °C";
 
-    // p для температуры
-    let pTemp = document.createElement("p");
-    pTemp.innerHTML = Math.round (letTemp-273) + " °C";
+  // переменная для облаков
+  let pСlouds = document.createElement("p");
+  pСlouds.className = "clouds";
+  pСlouds.innerHTML = letClouds + " in " + cityName;
 
-    //p для температуры кладем в див
-    divTemp.append(pTemp);
+  // переменная для Change
+  let pChange = document.createElement("p");
+  pChange.className = "change";
+  pChange.innerHTML = "Change city";
 
-//-------- Облака
-    //переменная для дива облаков
-  let divclouds = document.querySelector("#idClouds")
+  // Событие на нажатие написи поменять город
+  pChange.addEventListener("click", () => {
+    divCard.classList.toggle("displayNone");
+    divSearch.classList.toggle("displayNone");
+  });
 
-    // p для облаков
-    let pСlouds= document.createElement("p");
-    pСlouds.innerHTML = letClouds;
+  // кладем переменные в main
+  main.append(divCard);
+  divCard.append(pTemp);
+  divCard.append(pСlouds);
+  divCard.append(pChange);
+}
 
-    //p для облаков кладем в див
-    divclouds.append(pСlouds);
-  }
-
-  export {newElement}
+export { newElement };

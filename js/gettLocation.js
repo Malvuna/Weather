@@ -1,7 +1,7 @@
 import { newElement } from "./newElement.js";
-import { gettCity } from "./gettCity.js";
+import { gettCityForIp } from "./gettCityForIp.js";
 
-// функция берет локацию и отправляет на сервет локацию
+// функция берет локацию и отправляет на сервер
 async function gettLocation(latitude, longitude) {
   await fetch(
     "https://api.openweathermap.org/data/2.5/onecall?lat=" +
@@ -16,8 +16,9 @@ async function gettLocation(latitude, longitude) {
       console.log(data);
       let letTemp = data.current.temp;
       let letClouds = data.current.weather[0].description;
-
-      newElement(letTemp, letClouds);
+      gettCityForIp().then((cityName) => {
+        newElement(letTemp, letClouds, cityName);
+      });
     });
 }
 

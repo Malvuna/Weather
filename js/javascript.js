@@ -1,6 +1,8 @@
 import { gettLocation } from "./gettLocation.js";
 import { gettCity } from "./gettCity.js";
 import { gettCityForIp } from "./gettCityForIp.js";
+import { main } from "./newElement.js";
+import { divCard } from "./newElement.js";
 import { searchCity } from "./searchCity.js";
 
 //метод который показывает широту и долготу локации
@@ -9,24 +11,24 @@ navigator.geolocation.getCurrentPosition(
     // console.log(position.coords.latitude)
     // console.log(position.coords.longitude)
     gettLocation(position.coords.latitude, position.coords.longitude);
-    gettCityForIp()
+    gettCityForIp();
   },
   async function () {
     console.log("error"); // если не определяется то вызывает функцию погоды по городу
-    gettCity()     
+    gettCity();
   },
 );
 
-
-//-------БЛОК ВВОД ГОРОДА -------------------
-// переменная всей карточки с погодой
-export let card = document.querySelector("#card");
+//-------БЛОК ПОИСКА ГОРОДА -------------------
 
 //переменная всей карточки поиска города
-let newCity = document.querySelector("#input");
+export let divSearch = document.createElement("div");
+divSearch.className = "divInput displayNone";
+main.append(divSearch);
 
 // поле ввода
 export let inputCity = document.createElement("input");
+divSearch.append(inputCity);
 inputCity.className = "input";
 inputCity.type = "input";
 inputCity.name = "inputName";
@@ -37,6 +39,7 @@ inputCity.placeholder = "Type your city here";
 
 // кнопка Find
 let buttonFind = document.createElement("button");
+divSearch.append(buttonFind);
 buttonFind.type = "button";
 buttonFind.textContent = "Find";
 buttonFind.className = "buttonFind";
@@ -46,22 +49,6 @@ buttonFind.addEventListener("click", searchCity);
 
 buttonFind.addEventListener("click", () => {
   // card.innerHTML = " ";
-//   card.classList.toggle("displayNone");
-//   newCity.classList.toggle("displayNone");
+  divCard.classList.toggle("displayNone");
+  divSearch.classList.toggle("displayNone");
 });
-
-
-//сборка инпута и кнопки
-newCity.append(inputCity);
-newCity.append(buttonFind);
-//-------КОНЕЦ БЛОК ВВОД ГОРОДА -------------------
-
-
-// Надпись поменять город
-let textChange = document.querySelector("#idChange");
-
-// Событие на нажатие написи поменять город
-// textChange.addEventListener("click", () => {
-//   card.classList.toggle("displayNone");
-//   newCity.classList.toggle("displayNone");
-// });
