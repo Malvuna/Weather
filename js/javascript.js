@@ -10,24 +10,6 @@ navigator.geolocation.getCurrentPosition(
   },
   async function () {
     console.log("error"); // если не определяется то вызывает функцию погоды по городу
-    gettCity()},
+    gettCity();
+  },
 );
-
-async function gettCityLoc() {
-  await fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=33f3d3d2d94895db4810b85a8b2dabbf",
-    {},
-  )
-    .then((data) => data.json()) // возвращенеие ответа от сервера
-    .then((data) => {
-      console.log(data);
-
-      // let letTemp = data.current.temp
-      // let letClouds = data.current.weather[0].description
-
-      // console.log(letTemp);
-      // console.log(letClouds);
-
-      // newElement(letTemp, letClouds)
-    });
-}
