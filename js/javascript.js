@@ -52,3 +52,31 @@ buttonFind.addEventListener("click", () => {
   divCard.classList.toggle("displayNone");
   divSearch.classList.toggle("displayNone");
 });
+//-------
+
+//-------БЛОК ОШИБКИ -------------------
+
+//переменная всей карточки поиска города
+export let divError = document.createElement("div");
+divError.className = "card ";
+main.append(divError);
+
+// поле текста
+let textError = document.createElement("p");
+divError.append(textError);
+textError.className = "footer";
+textError.innerHTML = "Ooops. Something went wrong.";
+
+// кнопка Try again
+let buttonTry = document.createElement("button");
+divError.append(buttonTry);
+buttonTry.type = "button";
+buttonTry.textContent = "Try again";
+buttonTry.className = "buttonFind";
+
+// когда нажимаем кнопку Try скрываем это окно и показываем поиск по городу
+buttonTry.addEventListener("click", () => {
+  divError.classList.toggle("displayNone");
+  divSearch.classList.toggle("displayNone");
+});
+//-------
