@@ -58,7 +58,7 @@ buttonFind.addEventListener("click", () => {
 
 //переменная всей карточки поиска города
 export let divError = document.createElement("div");
-divError.className = "card ";
+divError.className = "card displayNone";
 main.append(divError);
 
 // поле текста

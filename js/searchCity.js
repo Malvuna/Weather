@@ -1,6 +1,7 @@
 import { inputCity } from "./javascript.js";
 import { newElement } from "./newElement.js";
 import { divCard } from "./newElement.js";
+import { divError } from "./javascript.js";
 
 // Функция на кнопку Find отдает обратно местоположение
 async function searchCity() {
@@ -19,6 +20,10 @@ async function searchCity() {
     .then((data) => {
       divCard.innerHTML = " ";
       console.log(data);
+      if (data.cod !== 200) {
+        console.log("error");
+        divError.classList.toggle("displayNone");
+      }
       let letTemp = data.main.temp;
       let letClouds = data.weather[0].description;
       let letCity = data.name;
