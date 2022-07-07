@@ -12,7 +12,7 @@ async function gettCity() {
 
 async function gettCityTwo(ip) {
   await fetch(
-    "https://geo.ipify.org/api/v2/country?apiKey=at_k1srgs6BSmRfRRrcJY60twztQ7Vt6&ipAddress=" +
+    "https://geo.ipify.org/api/v2/country?apiKey=at_OczVRgKPV70HeNULGYnThbKCZOv9F&ipAddress=" +
       ip,
     {
       method: "GET",

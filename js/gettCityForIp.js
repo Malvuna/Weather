@@ -1,7 +1,7 @@
 // функция получения названия города по IP
 async function gettCityForIp() {
   return await fetch(
-    "https://geo.ipify.org/api/v2/country?apiKey=at_k1srgs6BSmRfRRrcJY60twztQ7Vt6",
+    "https://geo.ipify.org/api/v2/country?apiKey=at_OczVRgKPV70HeNULGYnThbKCZOv9F",
     {
       method: "GET",
     },
