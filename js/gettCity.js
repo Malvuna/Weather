@@ -5,7 +5,7 @@ async function gettCity() {
     .then((data) => data.json())
     .then((data) => {
       // console.log(data);
-      // console.log(data.ip);
+      console.log(data.ip);
       gettCityTwo(data.ip);
     });
 }
@@ -21,7 +21,7 @@ async function gettCityTwo(ip) {
     .then((data) => data.json())
     .then((data) => {
       // console.log(data);
-      // console.log(data.location.region)
+      console.log(data.location.region)
       gettCityThree(data.location.region);
     });
 }
