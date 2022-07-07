@@ -20,9 +20,14 @@ async function gettCityTwo(ip) {
   )
     .then((data) => data.json())
     .then((data) => {
+      let city = data.location.region
+      console.log(city);
+      if (city == "Leningrad Oblast") {
+        city = "Leningradskaya Oblast'";
+      }
       // console.log(data);
-      console.log(data.location.region)
-      gettCityThree(data.location.region);
+      console.log(city)
+      gettCityThree(city);
     });
 }
 
