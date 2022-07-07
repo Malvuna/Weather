@@ -34,6 +34,7 @@ async function gettCityThree(region) {
   )
     .then((data) => data.json())
     .then((data) => {
+      console.log(data);
       gettLocation(data.coord.lat, data.coord.lon);
     });
 }
